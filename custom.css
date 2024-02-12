@@ -1,6 +1,6 @@
 @font-face {
     font-family: cio;
-    src: url(../font/cio5e25.eot) format('embedded-opentype'), url(../font/cio5e25.woff2) format('woff2'), url(../font/cio5e25.woff) format('woff'), url(../font/cio5e25.ttf) format('truetype'), url(../font/cio5e25.svg) format('svg');
+    src: url(cio5e25.eot) format('embedded-opentype'), url(cio5e25.woff2) format('woff2'), url(io5e25.woff) format('woff'), url(../font/cio5e25.ttf) format('truetype'), url(cio5e25.svg) format('svg');
     font-weight: 400;
     font-style: normal;
     font-display: swap

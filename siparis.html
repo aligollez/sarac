@@ -1,0 +1,266 @@
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="robots" content="noindex">
+        <title>Güvenli Sipariş Formu</title>
+        <link rel="stylesheet" href="css/app.css?v=1.1.9" />
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <style type="text/css">
+        .buyukfirsat {
+          margin-top: -10px;
+          height: 45px;
+          position: absolute;
+          right: 150px;
+          background-image: url("img/buyuk-firsat.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        .cilginfirsat {
+          margin-top: -10px;            
+          height: 45px;
+          position: absolute;
+          right: 150px;
+          background-image: url("img/cilgin-firsat.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+        .tedavigarantili {
+          margin-top: 110px;            
+          height: 30px;
+          position: absolute;
+          right: 145px;
+          background-image: url("img/tedavi-garantili.png");
+          background-repeat: no-repeat;
+          background-size: contain;
+        }                
+        </style>
+
+        
+ 
+        
+                
+    </head>
+    <body>
+        <header>
+            <div class="container">
+			<img src="img/logo.png" style="display: block;margin-left: auto; margin-right: auto; width: 80%;">
+			</div>
+        </header>
+        <main class="checkout">
+            <div class="sumbar">
+                <div class="container">
+                    <ul class="nav justify-content-startXXX align-items-center">
+                        <li>Güvenli Sipariş Formu</li>
+                        <li class="i-ar">Sipariş Özeti</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <img src="img/footer-tr.png" style="display: block;margin-left: auto; margin-right: auto; margin-top: -1.25rem; margin-bottom: 5px; width: 90%;"/>
+            
+            <div class="container">
+                <div class="custom-form"></div>
+                <form id="siparisformu" class="needs-validation" name="siparisformu" onsubmit="return formuKontrolEt()" action="tamamla.php" method="post" autocomplete="off">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-5 offset-lg-1 col-xl-4 offset-xl-1 order-md-last spack">
+                            <div class="product">
+                                <div class="form-group">
+                                    <input type="radio" class="d-none checkvalid" value="0" id="0" name="urun_paket"/>
+                                    <label for="0" class="user-select-none">
+                                        <i></i>
+                                        <img src="img/urun_1.png" alt="" />
+                                        <span>
+                                            <strong>1 ADET UKOFEN GREEN</strong>
+                                            <small>TOPLAM 30 TABLET<br>10 GÜNLÜK KULLANIM</small>
+                                            <small></small>
+                                            <s>670 TL</s><b style="margin-left: 5px;">419 TL</b><br/>
+                                            <sub style="background-color:#ffffff">+30 TL Kargo Ücreti</sub>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" class="d-none checkvalid" value="2" id="2" name="urun_paket" />
+                                    <label for="2" class="user-select-none">
+                                        <i></i>
+                                        <img src="img/urun_3.png" alt="" />
+                                        <span>
+                                            <span class="buyukfirsat"></span>
+                                            <strong>3 ADET UKOFEN GREEN</strong>
+                                            <small>TOPLAM 90 TABLET<br>30 GÜNLÜK KULLANIM
+                                            </small>
+                                            <small></small>
+                                            <s>1110 TL</s><b style="margin-left: 5px;">649 TL</b><br />
+                                            <sub>ÜCRETSİZ KARGO</sub>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="form-group">
+                                    <input type="radio" class="d-none checkvalid" value="4" id="4" name="urun_paket" />
+                                    <label for="4" class="user-select-none">
+                                        <i></i>
+                                        <img src="img/urun_5.png" style="margin-bottom: 20px!important;" alt="" />
+                                        <span>
+                                            <span class="cilginfirsat"></span>
+                                            <span class="tedavigarantili"></span>                                                 
+                                            <strong>5 ADET UKOFEN GREEN</strong>
+                                            <small>TOPLAM 150 TABLET<br>50 GÜNLÜK KULLANIM
+                                            </small>
+                                            <small></small>
+                                            <s>1850 TL</s><b style="margin-left: 5px;">799 TL</b><br />
+                                            <sub>ÜCRETSİZ KARGO</sub>
+                                        </span>
+                                    </label>
+                                </div>                              
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-5 col-xl-5 order-md-first sform">
+                            <div class="address">
+                                <div class="form-group">
+                                    <fieldset>
+                                        <i class="i-u1"></i>
+                                        <input type="text" id="sp_musteri" name="sp_musteri" class="form-control cusem checkvalid" placeholder="İsim Soyisim" required/>
+                                    </fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <fieldset>
+                                        <i class="i-p1"></i>
+                                        <input
+                                            type="tel"  
+                                            data-inputmask="'mask': '99999999999'"
+                                            id="telefon"
+                                            name="sp_telefon"
+                                            minlength="10"
+                                            maxlength="11"
+                                            class="form-control cusem checkvalid"
+                                            placeholder="Telefon Numarası"
+                                            required
+                                        />
+                                    </fieldset>
+                                </div>
+                                <div class="form-group">
+                                    <select name="sp_sehir" class="custom-select cusem checkvalid" required="true">
+                                        <option selected value="" disabled selected>İl Seçiniz</option>
+                                        <option value='1'>ADANA</option><option value='2'>ADIYAMAN</option><option value='3'>AFYONKARAHİSAR</option><option value='4'>AĞRI</option><option value='68'>AKSARAY</option><option value='5'>AMASYA</option><option value='6'>ANKARA</option><option value='7'>ANTALYA</option><option value='75'>ARDAHAN</option><option value='8'>ARTVİN</option><option value='9'>AYDIN</option><option value='10'>BALIKESİR</option><option value='74'>BARTIN</option><option value='72'>BATMAN</option><option value='69'>BAYBURT</option><option value='11'>BİLECİK</option><option value='12'>BİNGÖL</option><option value='13'>BİTLİS</option><option value='14'>BOLU</option><option value='15'>BURDUR</option><option value='16'>BURSA</option><option value='17'>ÇANAKKALE</option><option value='18'>ÇANKIRI</option><option value='19'>ÇORUM</option><option value='20'>DENİZLİ</option><option value='21'>DİYARBAKIR</option><option value='81'>DÜZCE</option><option value='22'>EDİRNE</option><option value='23'>ELAZIĞ</option><option value='24'>ERZİNCAN</option><option value='25'>ERZURUM</option><option value='26'>ESKİŞEHİR</option><option value='27'>GAZİANTEP</option><option value='28'>GİRESUN</option><option value='29'>GÜMÜŞHANE</option><option value='30'>HAKKARİ</option><option value='31'>HATAY</option><option value='76'>IĞDIR</option><option value='32'>ISPARTA</option><option value='34'>İSTANBUL</option><option value='35'>İZMİR</option><option value='46'>KAHRAMANMARAŞ</option><option value='78'>KARABÜK</option><option value='70'>KARAMAN</option><option value='36'>KARS</option><option value='37'>KASTAMONU</option><option value='38'>KAYSERİ</option><option value='79'>KİLİS</option><option value='71'>KIRIKKALE</option><option value='39'>KIRKLARELİ</option><option value='40'>KIRŞEHİR</option><option value='41'>KOCAELİ</option><option value='42'>KONYA</option><option value='43'>KÜTAHYA</option><option value='44'>MALATYA</option><option value='45'>MANİSA</option><option value='47'>MARDİN</option><option value='33'>MERSİN</option><option value='48'>MUĞLA</option><option value='49'>MUŞ</option><option value='50'>NEVŞEHİR</option><option value='51'>NİĞDE</option><option value='52'>ORDU</option><option value='80'>OSMANİYE</option><option value='53'>RİZE</option><option value='54'>SAKARYA</option><option value='55'>SAMSUN</option><option value='63'>ŞANLIURFA</option><option value='56'>SİİRT</option><option value='57'>SİNOP</option><option value='73'>ŞIRNAK</option><option value='58'>SİVAS</option><option value='59'>TEKİRDAĞ</option><option value='60'>TOKAT</option><option value='61'>TRABZON</option><option value='62'>TUNCELİ</option><option value='64'>UŞAK</option><option value='65'>VAN</option><option value='77'>YALOVA</option><option value='66'>YOZGAT</option><option value='67'>ZONGULDAK</option>                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <select name="sp_ilce" id="sp_ilce" class="custom-select cusem checkvalid" required="true">
+                                        <option selected value="" disabled selected >İlçe Seçiniz</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <textarea placeholder="Adres" class="custom-select" name="sp_adres" id="sp_adres" style="height: 100px;" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <select name="sp_odeme_yontemi" class="custom-select cusem checkvalid">
+                                        <option value="3" selected hidden>Ödeme Yöntemi Seçiniz</option>
+                                        <option value="1">Kapıda Nakit deme</option>
+                                        <option value="2">Kapıda Kartla Ödeme</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="payment">
+                                <div class="form-group">
+                                    <button type="submit" id="button" name="sbmt" class="btn shadow">SİPARİŞ VER</button>
+                                </div>
+                            </div>
+                            <div class="approve" style="display:none;">
+                                <div class="form-group custom-control custom-checkbox cucheck">
+                                    <input type="checkbox" class="custom-control-input cuinput checkvalid" id="information" checked required disabled />
+                                    <label class="custom-control-label culabel" for="information">
+                                        <b data-source="#salesco" data-target="#datapop">Mesafeli Satış Sözleşmesi ve Ön Bilgi Formu</b> 'nu okudum ve kabul ediyorum. Bu bilgiyi gndererek web sayfasının Gizlilik politikasını kabul
+                                        ediyorum.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer style="padding: 30px; margin-top: 10px;">
+            <div class="container">
+                    <h5 style="text-align:center;">Ukofen | Tm Hakları Saklıdır.</h5>
+            </div>
+        </footer>
+        <script src="js/inputmask.js" type="text/javascript"></script>
+        <script src="js/inputmask.binding.js" type="text/javascript"></script>
+        <script src="js/jquery.min9e36.js?v"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery.cookie.js"></script>
+        <script src="js/app.js" id="smart-app-script"></script>
+        <script>
+        function formuKontrolEt() {
+            var secimYapildi = false;
+            var radioButonlar = document.getElementsByName("urun_paket");
+
+            for (var i = 0; i < radioButonlar.length; i++) {
+                if (radioButonlar[i].checked) {
+                    secimYapildi = true;
+                    break;
+                }
+            }
+
+            if (!secimYapildi) {
+                alert("Lütfen bir ürün paketi seçin!");
+                return false;
+            }
+
+            return true;
+        }
+        </script>
+        <script>
+            document.onkeydown = function(e) {
+                    if (e.ctrlKey && 
+                        (e.keyCode === 67 || 
+                        e.keyCode === 86 || 
+                        e.keyCode === 85 || 
+                        e.keyCode === 117)) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+            };
+            $(document).keypress("u",function(e) {
+            if(e.ctrlKey)
+            {
+            return false;
+            }
+            else
+            {
+            return true;
+            }
+            });
+        </script>
+        <script>
+            var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+            var EnableRightClick = 0;
+            if(isNS)
+            document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+            function mischandler(){
+            if(EnableRightClick==1){ return true; }
+            else {return false; }
+            }
+            function mousehandler(e){
+            if(EnableRightClick==1){ return true; }
+            var myevent = (isNS) ? e : event;
+            var eventbutton = (isNS) ? myevent.which : myevent.button;
+            if((eventbutton==2)||(eventbutton==3)) return false;
+            }
+            function keyhandler(e) {
+            var myevent = (isNS) ? e : window.event;
+            if (myevent.keyCode==96)
+            EnableRightClick = 1;
+            return;
+            }
+            document.oncontextmenu = mischandler;
+            document.onkeypress = keyhandler;
+            document.onmousedown = mousehandler;
+            document.onmouseup = mousehandler;
+        </script>
+    </body>
+</html>

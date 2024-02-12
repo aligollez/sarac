@@ -1,7 +1,7 @@
 $("select[name='sp_ulke']").change(function () {
     var sp_ulke = $(this).val();
     $.ajax({
-        url: "ajax.php?type=getsehirler&sp_ulke=" + sp_ulke,
+        url: "https://green.ukofenglobal.com/siparis/ajax.php?type=getsehirler&sp_ulke=" + sp_ulke,
         method: "GET",
         success: function (data) {
             var rJson = $.parseJSON(data);
